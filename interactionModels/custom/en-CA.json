@@ -1,0 +1,210 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "reps",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1364034074280.251320299909",
+                "confirmation": "Confirm.Slot.1364034074280.251320299909"
+              }
+            }
+          ],
+          "name": "FeedbackIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "Assessment",
+              "type": "assessment"
+            }
+          ],
+          "name": "GetAssessmentIntent",
+          "samples": [
+            "i want to examine the {Assessment}",
+            "i want to start a {Assessment}",
+            "start a {Assessment}",
+            "start to play {Assessment} assessment",
+            "will you be offering {Assessment}",
+            "i want {Assessment}",
+            "do you offer {Assessment}",
+            "{Assessment} ",
+            "I want to assess {Assessment}",
+            "start {Assessment} assessment"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetInstructionsIntent",
+          "samples": [
+            "start now",
+            "start",
+            "I\u0027m ready"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "StartTimerIntent",
+          "samples": [
+            "start timer"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "StopTimerIntent",
+          "samples": [
+            "end timer"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "reps",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "I completed {reps} reps",
+                "{reps} repetitions",
+                "{reps} reps",
+                "i\u0027ve completed {reps} reps"
+              ]
+            }
+          ],
+          "name": "FeedbackIntent",
+          "samples": [
+            "I completed {reps}",
+            "{reps}",
+            "{reps} reps",
+            "{reps} repetition"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "assess my mobility",
+                  "test my mobility",
+                  "mobility",
+                  "mobility assessment",
+                  "mobility test"
+                ],
+                "value": "mobility"
+              },
+              "id": "MOBILITY"
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "balance assessment",
+                  "balance",
+                  "balance test",
+                  "assess my balance",
+                  "test my balance"
+                ],
+                "value": "balance"
+              },
+              "id": "BALANCE"
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "upper body strength test",
+                  "upper body strength assessment",
+                  "strength of upper body",
+                  "strength of my upper body",
+                  "upper body strength",
+                  "upper body",
+                  "test my upper body",
+                  "assess my upper body",
+                  "upper body assessment",
+                  "upper body test"
+                ],
+                "value": "upperBody"
+              },
+              "id": "UPPERBODY"
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "strength of lower body",
+                  "lower body strength",
+                  "test my lower body strength",
+                  "assess my lower body strength",
+                  "test my lower body",
+                  "assess my lower body",
+                  "test lower body",
+                  "assess lower body",
+                  "lower body",
+                  "lower body assessment",
+                  "lower body test"
+                ],
+                "value": "lowerBody"
+              },
+              "id": "LOWERBODY"
+            }
+          ],
+          "name": "assessment"
+        }
+      ],
+      "invocationName": "health assessment"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "how many repetitions have you completed?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How many reps have you completed?"
+          }
+        ],
+        "id": "Elicit.Slot.1364034074280.251320299909"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You\u0027ve completed {reps} reps, is that right?"
+          }
+        ],
+        "id": "Confirm.Slot.1364034074280.251320299909"
+      }
+    ]
+  }
+}

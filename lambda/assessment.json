@@ -1,0 +1,32 @@
+{
+    "assessments":[
+        {
+            "assessment": "lowerBody",
+            "instruction": "In this assessment, you will try to complete as much full stand and full sit as you can within 30 seconds. ",
+            "equipments": "A sturdy chair",
+            "assessmentType": ["30"],
+            "feedbackType": "reps"
+        },
+        {
+            "assessment": "upperBody",
+            "instruction": "In this assessment, you will try to complete as much curl ups as you can within 30 seconds. ",
+            "equipments": ["A sturdy chair with no handle", "Two hand weight"],
+            "assessmentType": ["30"],
+            "feedbackType": "reps"
+        },
+        {
+            "assessment": "balance",
+            "instruction": "In this assessment, you will try to hold each position for 10 seconds, there will be 4 positions in total. ",
+            "equipments": "A sturdy chair",
+            "assessmentType": ["10", "10", "10", "10"],
+            "feedbackType": "completed sets"
+        },
+        {
+            "assessment": "mobility",
+            "instruction": "In this assessment, we will time how long it takes you to walk around a distance marker and come back to the starting position. ",
+            "equipments": ["A sturdy chair", "A marker 10ft away from chair"],
+            "assessmentType": ["timer"],
+            "feedbackType": "time"
+        }
+        ]
+}
